@@ -31,7 +31,7 @@
   padding: 0 20px;
   overflow: hidden;
   background: white;
-  font-family:arial;
+  
   font-size: 16px;
   margin: 0;
 }
@@ -162,23 +162,63 @@
 .banner{
   height: auto;
   width: auto;
-  background: url(https://cdn.glitch.global/ff004ec6-b47e-42aa-a727-efd64bd13d2d/cyber.jpeg?v=1648400188428) center center no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   padding:60px 30px 0;
-  color: #E6FC19;
+  color: black;
 }
 .banner h1{
   font-size: 60px;
-  text-shadow: 5px 1px 1px #000;
   text-transform: uppercase;
   margin-left: -95px;
   margin-right: -49px;
 }
 .banner h1 span{
   color: #BEFC19;
+}
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }
       
       
@@ -231,7 +271,13 @@
     </nav>
 
       <div class="banner">
-        <h1><span>Welcome to my website</span></h1>
+        <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+  <h1>Sliding Diagonals Background Effect</h1>
+
+        
       </div>
     </div>
     </div>
